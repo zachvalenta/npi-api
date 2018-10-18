@@ -1,0 +1,275 @@
+{
+
+"0000072500001497116172": {
+    "affiliations": [
+      {
+        "name": "The Mount Sinai Hospital"
+      }
+    ],
+    "clinicalFoci": [
+      {
+        "name": "Acute Coronary Syndrome",
+        "url": "/health-library/diseases-conditions/acute-coronary-syndrome"
+      },
+      {
+        "name": "Angiography"
+      },
+      {
+        "name": "Aortic Regurgitation"
+      },
+      {
+        "name": "Atherectomy/Angioplasty Of Noncoronary Vessel"
+      },
+      {
+        "name": "Bradycardia"
+      },
+      {
+        "name": "Cardiac Catherization"
+      },
+      {
+        "name": "Cardiovascular Disease"
+      },
+      {
+        "name": "Cardioversion",
+        "url": "/health-library/special-topic/cardioversion"
+      },
+      {
+        "name": "Coronary Angioplasty"
+      },
+      {
+        "name": "Echocardiogram, Electrocardiogram"
+      },
+      {
+        "name": "Electrocardiogram",
+        "url": "/health-library/tests/electrocardiogram"
+      },
+      {
+        "name": "General Cardiology"
+      },
+      {
+        "name": "Heart Attack/Acute Coronary Syndrome"
+      },
+      {
+        "name": "Heart Block",
+        "url": "/health-library/diseases-conditions/heart-block"
+      },
+      {
+        "name": "Heart Disease"
+      },
+      {
+        "name": "Hyperlipidemia/High Cholesterol"
+      },
+      {
+        "name": "Tachycardia"
+      },
+      {
+        "name": "Valvular Heart Disease"
+      }
+    ],
+    "commentCount": 0,
+    "degree": "MD",
+    "firstName": "Srinivas",
+    "fullName": "Srinivas Duvvuri",
+    "furl": "srinivas-duvvuri",
+    "gender": "M",
+    "headshotUrl": "/files/fad_img_new/52/0000076810056470279641/0000072500001497116172.jpg",
+    "id": "0000072500001497116172",
+    "insurancePlans": [
+      "AETNA - Commercial",
+      "AETNA - Medicare",
+      "Affinity Medicaid-Medicare-Essential Exchange",
+      "CIGNA Healthcare",
+      "EmblemHealth - GHI-PPO",
+      "EmblemHealth - HIP",
+      "EmblemHealth - HIP-Medicaid",
+      "EmblemHealth - HIP-Medicare",
+      "Empire Blue Cross Blue Shield - Commercial / Exchange",
+      "Empire Blue Cross Blue Shield - Healthplus FKA Amerigroup Medicaid",
+      "Empire Blue Cross Blue Shield - Medicare",
+      "Empire Blue Cross Blue Shield - Top Tier",
+      "Fidelis Health Care",
+      "Health First Mount Sinai Select Medicare",
+      "HealthFirst Medicaid",
+      "HealthFirst Medicare",
+      "Medicare",
+      "Metroplus",
+      "NY Medicaid",
+      "Oxford - Freedom & Liberty",
+      "Select Health Medicaid - VNSNY",
+      "Senior Whole Health",
+      "United Health Care - Commercial",
+      "United Health Care - Community Care Medicaid",
+      "United Health Care - Empire Plan",
+      "United Health Care - Oxford Care",
+      "VNSNY Choice Medicare",
+      "WellCare Health Plan"
+    ],
+    "isAcceptingAppointments": true,
+    "isAcceptingNewPatients": true,
+    "isFacultyDoctor": true,
+    "isZocdocEnabled": false,
+    "languages": [
+      "English"
+    ],
+    "lastName": "Duvvuri",
+    "middleName": "",
+    "patientOffices": [
+      {
+        "acceptingAppointments": true,
+        "address1": "11 Ralph Place",
+        "address2": "Suite 109",
+        "city": "Staten Island",
+        "description": "Mount Sinai Doctors Staten Island",
+        "hasWeekendHours": false,
+        "isOpenEarly": false,
+        "isOpenLate": false,
+        "neighborhood": "Staten Island",
+        "officeId": "0000072440061115913471",
+        "primaryPhone": "718-981-2684",
+        "state": "NY",
+        "zip": "10304"
+      },
+      {
+        "acceptingAppointments": false,
+        "address1": "4864 Arthur Kill Road",
+        "address2": "",
+        "city": "Staten Island",
+        "description": "Mount Sinai Doctors Staten Island",
+        "hasWeekendHours": false,
+        "isOpenEarly": false,
+        "isOpenLate": false,
+        "neighborhood": "Staten Island",
+        "officeId": "0000072440061115975961",
+        "primaryPhone": "718-981-2684",
+        "state": "NY",
+        "zip": "10309"
+      }
+    ],
+    "primarySpecialty": {
+      "name": "Cardiology"
+    },
+    "profilePhotoUrl": "https://sinaicentral.mssm.edu/intranet/Home/edir_data/get_portrait/0000076810056470279641",
+    "ratings": {
+      "average": "5",
+      "totalCount": "381"
+    },
+    "specialties": [
+      {
+        "name": "Cardiology"
+      }
+    ]
+  },
+"0000072500001497116202": {
+    "affiliations": [
+      {
+        "name": "Mount Sinai Queens"
+      },
+      {
+        "name": "The Mount Sinai Hospital"
+      }
+    ],
+    "clinicalFoci": [
+      {
+        "name": "Biopsy",
+        "url": "/health-library/tests/biopsy"
+      },
+      {
+        "name": "CT Scan Of The Abdomen",
+        "url": ""
+      },
+      {
+        "name": "Diagnostic Ultrasound Of The Abdomen",
+        "url": ""
+      },
+      {
+        "name": "Magnetic Resonance Imaging",
+        "url": ""
+      },
+      {
+        "name": "Upper Gastrointestinal Series",
+        "url": ""
+      }
+    ],
+    "commentCount": 0,
+    "degree": "MD",
+    "firstName": "Eric",
+    "fullName": "Eric J Wilck",
+    "furl": "eric-j-wilck",
+    "gender": "M",
+    "headshotUrl": "/files/fad_img_new/28/0000076810017000813861/0000072500001497116202.jpg",
+    "id": "0000072500001497116202",
+    "insurancePlans": [
+      "AETNA - Commercial",
+      "AETNA - Medicare",
+      "Affinity Medicaid-Medicare-Essential Exchange",
+      "Amidacare Medicaid",
+      "CIGNA Healthcare",
+      "EmblemHealth - GHI-PPO",
+      "EmblemHealth - HIP",
+      "EmblemHealth - HIP-Medicaid",
+      "EmblemHealth - HIP-Medicare",
+      "Empire Blue Cross Blue Shield - Commercial / Exchange",
+      "Empire Blue Cross Blue Shield - Healthplus FKA Amerigroup Medicaid",
+      "Empire Blue Cross Blue Shield - Medicare",
+      "Empire Blue Cross Blue Shield - Top Tier",
+      "Fidelis Health Care",
+      "HealthFirst Medicaid",
+      "HealthFirst Medicare",
+      "Hotel Trades",
+      "Medicare",
+      "Metroplus",
+      "NY Medicaid",
+      "Oxford - Freedom & Liberty",
+      "Select Health Medicaid - VNSNY",
+      "Senior Whole Health",
+      "United Health Care - Commercial",
+      "United Health Care - Community Care Medicaid",
+      "United Health Care - Empire Plan",
+      "United Health Care - Mosaic",
+      "United Health Care - Oxford Care",
+      "VNSNY Choice Medicare",
+      "WellCare Health Plan"
+    ],
+    "isAcceptingAppointments": true,
+    "isAcceptingNewPatients": true,
+    "isFacultyDoctor": true,
+    "isZocdocEnabled": false,
+    "languages": [
+      "English",
+      "Hebrew",
+      "Spanish"
+    ],
+    "lastName": "Wilck",
+    "middleName": "J",
+    "patientOffices": [
+      {
+        "acceptingAppointments": true,
+        "address1": "1176 Fifth Avenue",
+        "address2": "",
+        "city": "New York",
+        "description": "Radiology Associates",
+        "hasWeekendHours": false,
+        "isOpenEarly": true,
+        "isOpenLate": true,
+        "neighborhood": "Upper East Side/Yorkville",
+        "officeId": "0000072440003265674981",
+        "primaryPhone": "212-241-8333",
+        "state": "NY",
+        "zip": "10029"
+      }
+    ],
+    "primarySpecialty": {
+      "name": "Radiology"
+    },
+    "profilePhotoUrl": "https://sinaicentral.mssm.edu/intranet/Home/edir_data/get_portrait/0000076810017000813861",
+    "specialties": [
+      {
+        "name": "Radiology"
+      },
+      {
+        "name": "Body Imaging"
+      }
+    ]
+  }
+
+}
