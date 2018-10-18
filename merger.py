@@ -6,9 +6,16 @@ def open_file():
 		return json.load(f)
 
 
-def read(f):
+def get_full_name(f):
+	l = list()
 	for i in list(f.keys()):
-		print(f[i]['fullName'])
+		l.append(f[i]['fullName'])
+	return l
 
 
-read(open_file())
+def do_something(s):
+	print(s)
+
+
+provider_names = get_full_name(open_file())
+do_something(provider_names)
