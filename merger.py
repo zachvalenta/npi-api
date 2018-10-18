@@ -13,9 +13,16 @@ def get_full_name(f):
 	return l
 
 
-def do_something(s):
-	print(s)
+def get_first_last_name(l):
+	nl = list()
+	for i in l:
+		names = i.split()
+		first = names[0]
+		last = names[len(names) - 1]
+		nl.append(set([first, last]))
+	print(type(nl))
+	return nl
 
 
 provider_names = get_full_name(open_file())
-do_something(provider_names)
+get_first_last_name(provider_names)
