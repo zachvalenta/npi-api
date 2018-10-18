@@ -1,6 +1,6 @@
 import json
 import requests
-from demjson import decode
+
 
 def open_file():
 	with open('ms_data_sample.json') as f:
@@ -25,20 +25,28 @@ def get_first_last_name(l):
 
 
 def lookup_npi(l):
+	nl = list()
 	for i in l:
 		url = 'https://npiregistry.cms.hhs.gov/api?first_name={}&last_name={}&pretty=true'\
 			.format(i[0], i[1])
 		res = requests.get(url)
-		print(res.json()['results'][0]['number'])
-		# print(res.json().find('number'))
-		# if 'number' in res.json():
-		# 	print()
-		# res_json = decode(res.json())
-		# print(res_json)
+		# be nice to fix formatting via demjson
+		nl.append(res.json()['results'][0]['number'])
+	return nl
 
-	return 'foo'
+
+def add_npi(l):
+	f = open_file()
+	tmp = 0
+	for i in list(f):
+		f[i]['npi_number'] = l[tmp]
+		tmp += 1
+	new_file = open('ms_data_merged.json', 'w')
+	new_file.write(json.dumps(f))
+	new_file.close()
 
 
 provider_names = get_full_name(open_file())
 provider_names_discrete = get_first_last_name(provider_names)
 npi = lookup_npi(provider_names_discrete)
+add_npi(npi)
