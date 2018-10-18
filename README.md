@@ -16,18 +16,13 @@ Here goes nothing 😄
 
 🚠 __problem (germane)__
 
-* take data from Mount Sinai
+* take data from data set
 * use it to look up NPI number
-* add NPI number back into Mount Sinai dataset
+* add NPI number back into data set
 
 ⏰ __what I did__
 
-I'm not super sure that I actually understand the problem, so I built a basic POC against limited scope i.e. 2 obj from Mount Sinai data vs. the full data set (which busted PyCharm 😮)
-
-<figure>
-    <img src="json-breaks-pycharm.png">
-    <figcaption></figcaption>
-</figure>
+I'm not super sure that I actually understand the problem, so I built a basic POC against limited scope i.e. 2 obj from data set vs. the full data set
 
 Like a real project at work, my general approach is:
 
@@ -36,4 +31,4 @@ Like a real project at work, my general approach is:
 
 📮 __feedback plz__
 
-Figured I'd show you guys what I did Wednesday night after work and make sure I was barking up the right tree before writing unit tests 😓
+Figured I'd show you guys what I did Wednesday night after work and make sure I was barking up the right tree 😓
