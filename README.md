@@ -26,7 +26,7 @@ I'm not super sure that I actually understand the problem, so I built a basic PO
 
 Like a real project at work, my general approach is:
 
-* get some ink on the page (concreate > abstract)
+* get some ink on the page (concrete > abstract)
 * ask a few questions before full implementation (safe > sorry)
 
 📮 __feedback plz__
