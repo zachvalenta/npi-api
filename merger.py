@@ -8,20 +8,19 @@ def open_file():
 
 
 def get_full_name(f):
-	l = list()
+	full_names = dict()
 	for i in list(f.keys()):
-		l.append(f[i]['fullName'])
-	return l
+		full_names[i] = f[i]['fullName']
+	return full_names
 
 
-def get_first_last_name(l):
-	nl = list()
-	for i in l:
-		names = i.split()
-		first = names[0]
-		last = names[len(names) - 1]
-		nl.append(tuple([first, last]))
-	return nl
+def get_first_last_name(d):
+	first_last_names = dict()
+	for i in d.items():
+		key = i[0]
+		first, *rest, last = i[1].split()
+		first_last_names[key] = tuple([first, last])
+	return first_last_names
 
 
 def lookup_npi(l):
@@ -32,6 +31,7 @@ def lookup_npi(l):
 		res = requests.get(url)
 		# be nice to fix formatting via demjson
 		nl.append(res.json()['results'][0]['number'])
+
 	return nl
 
 
@@ -46,7 +46,7 @@ def add_npi(l):
 	new_file.close()
 
 
-provider_names = get_full_name(open_file())
-provider_names_discrete = get_first_last_name(provider_names)
-npi = lookup_npi(provider_names_discrete)
+provider_names_full = get_full_name(open_file())
+provider_names_first_last = get_first_last_name(provider_names_full)
+npi = lookup_npi(provider_names_first_last)
 add_npi(npi)
