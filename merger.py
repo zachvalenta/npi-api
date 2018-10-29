@@ -8,31 +8,34 @@ def open_file():
 
 
 def get_full_name(f):
-	full_names = dict()
+	plus_whole_name = dict()  # instead of creating a new dict, modify in place?
 	for i in list(f.keys()):
-		full_names[i] = f[i]['fullName']
-	return full_names
+		plus_whole_name[i] = f[i]['fullName']
+	return plus_whole_name
 
 
 def get_first_last_name(d):
-	first_last_names = dict()
+	plus_first_last_name = dict()
 	for i in d.items():
 		key = i[0]
 		first, *rest, last = i[1].split()
-		first_last_names[key] = tuple([first, last])
-	return first_last_names
+		plus_first_last_name[key] = tuple([first, last])
+	return plus_first_last_name
 
 
-def lookup_npi(l):
-	nl = list()
-	for i in l:
+def lookup_npi(d):
+	plus_npi = dict()
+	for i in d.items():
 		url = 'https://npiregistry.cms.hhs.gov/api?first_name={}&last_name={}&pretty=true'\
-			.format(i[0], i[1])
+			.format(i[1][0], i[1][1])
 		res = requests.get(url)
-		# be nice to fix formatting via demjson
-		nl.append(res.json()['results'][0]['number'])
-
-	return nl
+		try:
+			npi = res.json()['results'][0]['number']
+			plus_npi[i[0]] = npi
+		except IndexError:
+			print('NPI lookup failed for {}'.format(i))
+			plus_npi[i[0]] = ''
+	return plus_npi
 
 
 def add_npi(l):
@@ -48,5 +51,5 @@ def add_npi(l):
 
 provider_names_full = get_full_name(open_file())
 provider_names_first_last = get_first_last_name(provider_names_full)
-npi = lookup_npi(provider_names_first_last)
-add_npi(npi)
+key_to_npi = lookup_npi(provider_names_first_last)
+add_npi(key_to_npi)
