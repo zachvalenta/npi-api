@@ -15,9 +15,9 @@ def parse_provider_names(json):
 	return names
 
 
-def lookup_npi(d):
+def lookup_npi(names):
 	plus_npi = dict()
-	for i in d.items():
+	for i in names.items():  # TODO: check cache before making lookup
 		url = 'https://npiregistry.cms.hhs.gov/api?first_name={}&last_name={}&pretty=true'\
 			.format(i[1][0], i[1][1])
 		res = requests.get(url)
@@ -28,7 +28,9 @@ def lookup_npi(d):
 			print('NPI lookup failed for {}'.format(i))
 			plus_npi[i[0]] = ''
 	# TODO: cache NPI
-	return plus_npi
+	cache = open('ms_data_cache.json', 'w')
+	cache.write(json.dumps(plus_npi))
+	cache.close()
 
 
 # def add_npi(d):
@@ -50,6 +52,5 @@ def lookup_npi(d):
 
 
 provider_names = parse_provider_names(load_original_json())
-import pdb; pdb.set_trace()
-key_to_npi = lookup_npi(provider_names)
+lookup_npi(provider_names)
 # add_npi(key_to_npi)
