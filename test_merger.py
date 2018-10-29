@@ -1,6 +1,6 @@
 import unittest
 
-from merger import open_file, get_full_name, get_first_last_name
+from merger import load_original_json, parse_provider_names, get_first_last_name
 
 
 class TestApp(unittest.TestCase):
@@ -9,7 +9,7 @@ class TestApp(unittest.TestCase):
 		self.assertEqual(True, True)
 
 	def test_get_full_name_type(self):
-		self.assertEqual(list, type(get_full_name(open_file())))
+		self.assertEqual(list, type(parse_provider_names(load_original_json())))
 
 	def test_get_first_last_name_type(self):
-		self.assertEqual(list, type(get_first_last_name(open_file())))
+		self.assertEqual(list, type(get_first_last_name(load_original_json())))

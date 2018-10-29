@@ -2,25 +2,17 @@ import json
 import requests
 
 
-def open_file():
+def load_original_json():
 	with open('ms_data_sample.json') as f:
 		return json.load(f)
 
 
-def get_full_name(f):
-	plus_whole_name = dict()  # instead of creating a new dict, modify in place?
-	for i in list(f.keys()):
-		plus_whole_name[i] = f[i]['fullName']
-	return plus_whole_name
-
-
-def get_first_last_name(d):
-	plus_first_last_name = dict()
-	for i in d.items():
-		key = i[0]
-		first, *rest, last = i[1].split()
-		plus_first_last_name[key] = tuple([first, last])
-	return plus_first_last_name
+def parse_provider_names(json):
+	names = dict()  # TODO: modify in place instead of new dict
+	for i in list(json.keys()):
+		first, *rest, last = json[i]['fullName'].split()
+		names[i] = tuple([first, last])
+	return names
 
 
 def lookup_npi(d):
@@ -35,21 +27,29 @@ def lookup_npi(d):
 		except IndexError:
 			print('NPI lookup failed for {}'.format(i))
 			plus_npi[i[0]] = ''
+	# TODO: cache NPI
 	return plus_npi
 
 
-def add_npi(l):
-	f = open_file()
-	tmp = 0
-	for i in list(f):
-		f[i]['npi_number'] = l[tmp]
-		tmp += 1
-	new_file = open('ms_data_merged.json', 'w')
-	new_file.write(json.dumps(f))
-	new_file.close()
+# def add_npi(d):
+# 	orig = get_original_json()
+# 	for i in list(orig):
+#
+# 		orig[i]['npi_number'] = d[orig[i]]
+#
+#
+#
+# 	f = open_file()
+# 	tmp = 0
+# 	for i in list(f):
+# 		f[i]['npi_number'] = d[tmp]
+# 		tmp += 1
+# 	new_file = open('ms_data_merged.json', 'w')
+# 	new_file.write(json.dumps(f))
+# 	new_file.close()
 
 
-provider_names_full = get_full_name(open_file())
-provider_names_first_last = get_first_last_name(provider_names_full)
-key_to_npi = lookup_npi(provider_names_first_last)
-add_npi(key_to_npi)
+provider_names = parse_provider_names(load_original_json())
+import pdb; pdb.set_trace()
+key_to_npi = lookup_npi(provider_names)
+# add_npi(key_to_npi)
